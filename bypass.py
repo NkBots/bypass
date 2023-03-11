@@ -87,7 +87,7 @@ def error(update, context):
  
 def main():
     
-    TOKEN = '6284968138:AAEeFoLmmQS-MeIvkeAcnNpx-aEveLvIp2w'
+    TOKEN = '6275139213:AAHppqxiN5ipKgtvSXrpmTASMVij8aIa6NQ'
     updater = Updater(token=TOKEN, use_context=True)
     dispatcher = updater.dispatcher
     
@@ -102,7 +102,7 @@ def main():
     # Filters out unknown messages.
     updater.dispatcher.add_handler(MessageHandler(Filters.text, unknown_text))
     PORT = int(os.environ.get('PORT', '443'))
-    HOOK_URL = 'https://smexxx.herokuapp.com' + '/' + TOKEN
+    HOOK_URL = 'https://nkbypassbot.herokuapp.com' + '/' + TOKEN
     updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=TOKEN, webhook_url=HOOK_URL)
     updater.idle()
 
